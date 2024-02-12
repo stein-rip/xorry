@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>XORRY</title>
+	</head>
+	<body>
+		<div class="hexTo64">
+			<p>change hex string to base64</p>
+			<label for="hexInput">hex string:</label>
+			<input type="text" id="hexInput" />
+			<button id="convertButton">to base64</button>
+			<textarea id="base64Output" rows="4" cols="50" readonly></textarea>
+		</div>
+		<div class="fixedXor">
+			<p>enter 2 equal length buffers to produce an XOR combination</p>
+			<label for="input1">buffer 1:</label>
+			<input type="text" id="input1" />
+			<br />
+			<label for="input2">buffer 2:</label>
+			<input type="text" id="input2" />
+			<button onclick="calculateXOR()">to XOR</button>
+			<!-- <div id="result"></div> -->
+			<textarea id="result" rows="4" cols="50" readonly></textarea>
+		</div>
+		<div class="singleCharXor">
+			<p>loop through hex strings to detect single-character XOR</p>
+			<input type="file" id="fileInput" />
+			<button onclick="handleFile()">decode</button>
+			<textarea id="result2" rows="4" cols="50" readonly></textarea>
+		</div>
+
+		<div class="repeatingKeyXor">
+			<p>enter a key and some text to generate ciphertext</p>
+			<label for="key">key:</label><br />
+			<input type="text" id="key" /><br /><br />
+			<label for="plaintext">text:</label><br />
+			<textarea id="plaintext" rows="4" cols="50"></textarea><br />
+			<button onclick="encrypt()">Encrypt</button><br /><br />
+			<label for="ciphertext">your ciphertext:</label><br />
+			<textarea id="ciphertext" rows="4" cols="50" readonly></textarea>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
